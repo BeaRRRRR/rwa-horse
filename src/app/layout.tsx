@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description: "Web3Modal Example",
 };
 
-export default function RootLayout({ children }) {
+export type Props = {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: Props ) {
   return (
     <html lang="en">
       <body>

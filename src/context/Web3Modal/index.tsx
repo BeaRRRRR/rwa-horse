@@ -6,7 +6,7 @@ import { WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet } from 'viem/chains'
 
 // 1. Get projectId
-const projectId = process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID
+const projectId = process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || ''
 
 // 2. Create wagmiConfig
 const metadata = {
@@ -22,6 +22,10 @@ const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata })
 // 3. Create modal
 createWeb3Modal({ wagmiConfig, projectId, chains, themeMode: 'light' })
 
-export function Web3Modal({ children }) {
+export type Props = {
+  children: React.ReactNode,
+}
+
+export function Web3Modal({ children }: Props) {
   return <WagmiConfig config={wagmiConfig}>{children}</WagmiConfig>;
 }
