@@ -1,10 +1,22 @@
 /** @type {import('next').NextConfig} */
-// Path: next.config.js
 const nextConfig = {
-  webpack: config => {
-    config.externals.push('pino-pretty', 'lokijs', 'encoding')
-    return config
-  }
-}
+  // transpilePackages: ["@web3inbox/widget-react"],
+  // experimental: {
+  //   esmExternals: "loose",
+  // },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+        ],
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

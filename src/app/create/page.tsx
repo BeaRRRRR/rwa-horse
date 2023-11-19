@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Create() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="">
       <CreateForm/>
    </div>
   );

@@ -1,26 +1,56 @@
+'use client'
+
 // components/HorseCard.tsx
 import React from 'react';
 
 interface HorseCardProps {
   name: string;
+  age: string;
+  height: string;
+  gender: string;
+  raceType: string;
+  breed: string;
+  color: string;
   description: string;
-  tokens: number;
-  timestamp?: string;
-  // Add other props as necessary
+  totalNFT: string;
+  price: string;
+  date: string;
+  imageUrl: string; // Assuming you pass the image URL as a prop
 }
 
-const HorseCard: React.FC<HorseCardProps> = ({ name, description, tokens, timestamp }) => {
+const HorseCard: React.FC<HorseCardProps> = ({
+  name,
+  age,
+  height,
+  gender,
+  raceType,
+  breed,
+  color,
+  description,
+  totalNFT,
+  price,
+  date,
+  imageUrl
+}) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md flex items-center justify-between mb-4">
-      <div className="flex-1">
-        <div className="bg-gray-300 h-24 w-24 rounded-md mb-3"></div> {/* Placeholder for image */}
-        <h4 className="text-lg font-semibold">{name}</h4>
-        <p className="text-gray-600">{description}</p>
+    <div className="">
+      <div className="flex">
+        <div className="mr-10">
+          <img
+            src={imageUrl}
+            alt={name}
+            className="rounded-lg object-cover w-full h-60 w-60" // Adjust size as needed
+          />
+        </div>
+        <div className="col-span-2">
+          <h3 className="text-3xl font-bold text-superwhite mb-4">{name}</h3>
+          <p className="text-orange mb-2">{`${age} · ${height} · ${gender} · ${raceType} · ${breed} · ${color}`}</p>
+          <p className="text-gray pb-16">{description}</p>
+          <p className="text-superwhite text-xl mb-3">{`Total ${totalNFT} @ ${price}`}</p>
+          <p className="text-gray">{date}</p>
+        </div>
       </div>
-      <div className="text-right">
-        <div className="text-orange-500 font-semibold">{tokens} tokens</div>
-        {timestamp && <div className="text-sm text-gray-500">{timestamp}</div>}
-      </div>
+      <hr className="border-t border-gray my-14" />
     </div>
   );
 };

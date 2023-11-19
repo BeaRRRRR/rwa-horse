@@ -10,11 +10,11 @@ export default function StatsPanel() {
   ];
 
   return (
-    <div className="flex justify-between bg-white rounded-lg shadow px-6 py-3">
+    <div className="flex justify-center px-6 py-3">
 {stats.map((stat, index) => (
-        <div key={index} className="text-center">
-          <div className="text-xl font-semibold text-gray-900">{stat.number}</div> {/* Ensuring text is dark */}
-          <div className="text-sm text-gray-500">{stat.label}</div>
+        <div key={index} className="text-center mr-10">
+          <div className="text-5xl mb-2 font-semibold text-orange">{stat.number}</div> {/* Ensuring text is dark */}
+          <div className="text-sm text-black text-lg">{stat.label}</div>
         </div>
 ))}
     </div>
