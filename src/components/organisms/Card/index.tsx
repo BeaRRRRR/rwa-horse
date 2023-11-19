@@ -56,21 +56,21 @@ const Card: React.FC<CardProps> = ({
         <div className="flex justify-between items-center mb-4">
           <div>
             <p className="text-orange">{mintedNFT * 100 / totalNFT}% minted</p>
-            <p className="text-orange">{mintedNFT} NFTs</p>
+            <p className="text-orange">{mintedNFT} tokens</p>
           </div>
           <div>
             <p className="text-gray">100%</p>
-            <p className="text-gray">{totalNFT} NFTs</p>
+            <p className="text-gray">{totalNFT} tokens</p>
           </div>
         </div>
         <ProgressBar percentage={mintedNFT * 100 / totalNFT } />
-        <p className="mt-6 mb-2 text-2xl text-white font-bold">{nftPrice} CHD / NFT</p>
+        <p className="mt-6 mb-2 text-2xl text-white font-bold">{nftPrice} CHZ</p>
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center">
             <button onClick={decreaseQuantity} className="text-white bg-gray-600 h-10 w-10 flex items-center justify-center rounded-full">
               &ndash;
             </button>
-            <input className="text-white mx-4"/>
+            <p className="text-white mx-4">{quantity}</p>
             <button onClick={increaseQuantity} className="text-white bg-gray-600 h-10 w-10 flex items-center justify-center rounded-full">
               +
             </button>

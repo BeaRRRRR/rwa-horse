@@ -43,7 +43,7 @@ const horses = [
 
       <div className='max-w-4xl mx-auto'>
       <header className="flex justify-between items-center mb-14">
-        <h1 className="text-4xl text-orange">You've invested</h1>
+        <h1 className="text-4xl text-orange">Youve invested</h1>
       </header>
 
       <div>

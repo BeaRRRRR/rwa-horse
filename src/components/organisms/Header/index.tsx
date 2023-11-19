@@ -3,6 +3,7 @@
 import ConnectButton from '@/components/molecules/ConnectButton/index';
 import React from 'react';
 import Link from 'next/link'
+import Notification from '@/components/organisms/Notification'
 
 interface HeaderProps {
   seller?: boolean,
@@ -16,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ buyer = false, seller = false , stable 
   return (
     <header className="py-7 px-24 bg-brown flex justify-center">
         <div className="flex justify-between w-full">
-          {!seller && !stable && <h1 className="text-3xl font-bold text-superwhite">HorsePad</h1>}
+          {!seller && !stable && <h1 className="text-3xl font-bold text-superwhite">Real Race</h1>}
             <div className="flex align-center">
               {/* This will be the placeholder for the button */}
               {seller || buyer &&
@@ -26,6 +27,7 @@ const Header: React.FC<HeaderProps> = ({ buyer = false, seller = false , stable 
                  </Link>
                </div>
               }
+              <Notification/>
               {stable &&
                <div>
                <Link href="/" className="text-orange-500 flex items-center">

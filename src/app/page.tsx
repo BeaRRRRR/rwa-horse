@@ -116,8 +116,17 @@ export default function Home() {
                   <Card
                     title="Strike Gold"
                     subtitle="2 years · 16 hands · Filly · Dutch Warmblood · Chestnut brown"
-                    description="Lorem imsum dolor sit amet Jordan pls give me money"
-                    imageUrl="https://i.imgur.com/ga5nxoB.jpeg"
+                    description="Has a gentle temperament and a competitive spirit, making her well-suited for both experienced riders and those new to the racing scene. She has been trained in both flat racing and show jumping, showcasing remarkable versatility and athleticism."
+                    imageUrl="https://i.imgur.com/SU7gZt0.jpeg"
+                    mintedNFT={320}
+                    totalNFT={1000}
+                    nftPrice='1'
+                  />
+                  <Card
+                    title="Jacky William"
+                    subtitle="4 years · 16 hands · Filly · Dutch Warmblood · Chestnut brown"
+                    description="Bred from a million dollar race horse"
+                    imageUrl="https://i.imgur.com/SU7gZt0.jpeg"
                     mintedNFT={320}
                     totalNFT={1000}
                     nftPrice='1'

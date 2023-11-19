@@ -45,9 +45,11 @@ const horses = [
           <div className='max-w-4xl mx-auto'>
       <header className="flex justify-between items-center mb-14">
         <h1 className="text-4xl text-orange">Your horses</h1>
-        <button className="bg-orange py-2 px-4 rounded-lg shadow-lg">
+    <Link href='/create'>
+        <p className="bg-orange py-2 px-4 rounded-lg shadow-lg">
           Add a new horse
-        </button>
+        </p>
+    </Link>
       </header>
 
       <div>

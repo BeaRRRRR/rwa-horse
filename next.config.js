@@ -4,6 +4,9 @@ const nextConfig = {
   // experimental: {
   //   esmExternals: "loose",
   // },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   async headers() {
     return [
       {

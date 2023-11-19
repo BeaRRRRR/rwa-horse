@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import useHorseStore from '@/store/horse'
 import { writeContract, readContract, waitForTransaction } from 'wagmi/actions'
 import { factoryAbi } from '@/util/factoryAbi';
+import ConnectButton from '@/components/molecules/ConnectButton/index';
 
 const CreateForm: React.FC = () => {
 const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>();
@@ -54,7 +55,9 @@ const { register, handleSubmit, reset, formState: { errors } } = useForm<FormVal
       {/* Right Side with Form */}
       <div className="w-1/2 bg-orange px-28 py-14 flex flex-col justify-between">
         <div>
+          <ConnectButton/>
           <h2 className="text-superblack text-5xl font-bold mb-16">Let’s create your Token</h2>
+
 
           <ImageInput />
 
