@@ -19,7 +19,7 @@ export default function Notification() {
   const isReady = useInitWeb3InboxClient({
     // The project ID and domain you setup in the Domain Setup section
     projectId: '6af84ded5d41bf422f6154c6ffe3bf7a',
-    domain: 'television-harbor-nose-prayer.trycloudflare.com',
+    domain: 'rwa-horse.vercel.app',
 
     // Allow localhost development with "unlimited" mode.
     // This authorizes this dapp to control notification subscriptions for all domains (including `app.example.com`), not just `window.location.host`
